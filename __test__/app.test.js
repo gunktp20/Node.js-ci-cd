@@ -29,11 +29,11 @@ describe('API Testing', () => {
     expect(Array.isArray(res.body)).toBe(true);  // ตรวจสอบว่าข้อมูลเป็น array
   });
 
-//   it('should return orders message on GET /api/orders', async () => {
-//     const res = await request(app).get('/api/orders');
-//     expect(res.statusCode).toEqual(200);
-//     expect(res.body).toHaveProperty('orders', 'node.js api ec2 ci/cd orders route');
-//   });
+  it('should return orders message on GET /api/orders', async () => {
+    const res = await request(app).get('/api/orders');
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toHaveProperty('orders', 'node.js api ec2 ci/cd orders route');
+  });
 
   // ทดสอบ Route ที่ไม่ถูกต้อง
   it('should return 404 on invalid route', async () => {
